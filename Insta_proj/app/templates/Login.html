@@ -1,0 +1,62 @@
+<HTML>
+<head>
+<style>
+
+body{
+
+background: red; 
+    background: -webkit-linear-gradient(blue, cyan); 
+    background: -o-linear-gradient(blue, cyan); 
+    background: -moz-linear-gradient(blue, cyan); 
+    background: linear-gradient(blue, cyan); 
+
+}
+input{
+height:10px;
+width:240px;
+padding:20px;
+background:black;
+font-size:20px;
+color:white;
+}
+.button
+{
+height:20px;
+width:200px;
+position:center;
+padding-top:9px;
+padding-bottom:30px;
+background:green;
+font-size:20px;
+color:white;
+}
+</style>
+<title>
+Log IN....
+</title>
+</head>
+<body  style="margin-top:150px;">
+<center>
+<form  method="post">
+{% csrf_token %}
+</br>
+</br>
+<input type='name' name='username' placeholder="Enter username" value={{username}}>
+</br>
+</br>
+
+</br>
+<input    name='password' type='password' placeholder='Enter the password' value={{password}}>
+</br>
+</br>
+
+</br>
+</br>
+<input class ="button" type='submit' value="Login">
+</form>
+</center>
+
+</body>
+
+
+</HTML>

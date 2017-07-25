@@ -1,0 +1,80 @@
+<HTML>
+<head>
+<style>
+a{
+color:red;
+font-size:20px;
+text-decoration:none;
+
+}
+.date
+{
+position: absolute;
+    bottom: 5px;
+    right: 16px;
+    font-size: 20px;
+    text-decoration:underlined;
+}
+
+body{
+
+background: red; 
+    background: -webkit-linear-gradient(blue, cyan); 
+    background: -o-linear-gradient(blue, cyan); 
+    background: -moz-linear-gradient(blue, cyan); 
+    background: linear-gradient(blue, cyan); 
+
+}
+input{
+height:10px;
+width:240px;
+padding:20px;
+background:black;
+font-size:20px;
+color:white;
+}
+.button
+{
+height:20px;
+width:200px;
+position:center;
+padding-top:9px;
+padding-bottom:30px;
+background:green;
+font-size:20px;
+color:white;
+}
+</style>
+<title>
+SIGN UP....
+</title>
+</head>
+<body  style="margin-top:150px;">
+<center>
+<form method="post">
+ {% csrf_token %}
+<input type='name'  placeholder='Enter your Full name' name="name" id="name" value={{name}}>
+</br>
+</br>
+<input type='name' placeholder="Enter username" name="username" id=""username value={{username}}>
+</br>
+</br>
+<input type= 'mail' placeholder='Enter your Email' name="email" id="mail" value={{email}}>
+</br>
+</br>
+<input type='password' placeholder='Enter the password' name="password" id="password" value={{password}}>
+</br>
+</br>
+
+<input class ="button" type='submit'>
+</br>
+</br>
+<a href="login/"> Already a user login here....</a>
+</form>
+</center>
+
+<div class="date"> {{today}} {{hello}}</div>
+</body>
+
+
+</HTML>
