@@ -8,7 +8,7 @@ import uuid
 class user_details(models.Model):
     name = models.CharField(max_length=120)
     email = models.EmailField()
-    username = models.CharField(max_length=120 ,)
+    username = models.CharField(max_length=120)
     password = models.CharField(max_length=400)
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now=True)
@@ -25,11 +25,29 @@ class session_token(models.Model):
     def create_token(self):
         self.token=uuid.uuid4()
 
+    def __str__(self):
+        return self.username
+
 
 class post_model(models.Model):
     username=models.ForeignKey(user_details)
     image=models.FileField(upload_to='user_images')
     image_url=models.CharField(max_length=250)
     caption=models.CharField(max_length=400)
+    has_liked=models.BooleanField(default=False)
     created_on=models.DateTimeField(auto_now_add=True)
     updated_on=models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return self.username.name + '  ' +   self.image_url
+
+
+class likes(models.Model):
+    username= models.ForeignKey(user_details)
+    post=models.ForeignKey(post_model)
+    created_on = models.DateTimeField(auto_now_add=True)
+    updated_on = models.DateTimeField(auto_now=True)
+
+    @property
+    def like_count(self):
+        return  len(likes.objects.filter(post=self))

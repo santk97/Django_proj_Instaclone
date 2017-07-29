@@ -2,10 +2,17 @@
 from __future__ import unicode_literals
 from django.shortcuts import render , HttpResponse ,redirect
 import datetime
-from forms import signedup , login_form
-from models import user_details ,session_token
+from forms import signedup , login_form, posts , like
+from models import user_details ,session_token , post_model ,likes
 from django.contrib.auth.hashers import make_password ,check_password
+from imgurpython import ImgurClient
+import os
+
 # Create your views here.
+
+client_id='710fd5f2970325f'
+client_secret='3426c4aa99f4b77d7da86bd929b106b5f71610c3'
+
 
 
 def sign_up(request):
@@ -49,7 +56,7 @@ def login(request):
                     token=session_token(username=user)
                     token.create_token()
                     token.save()
-                    print token
+                    #print str(token)
                     response = redirect('/feed/')
                     print response
                     response.set_cookie(key='session_token', value=token.token)
@@ -77,6 +84,18 @@ def feed(request):
     user=check_validation(request)
     if user:
         print 'authentic user'
+
+        post = post_model.objects.all()#.orderby('-created_on', )
+        for post_temp in post:
+            existing_like = likes.objects.filter(post=post_temp, username=user).first()
+            if existing_like:
+                print ' like exists'
+                post_temp.has_liked = True
+                print post_temp.has_liked
+                #post_temp.save()\
+            else:
+                print ' like absent going by default'
+        return render(request, 'feed.html', {'posts':post})
     else :
         print 'user not logged in'
         return redirect('/login/')
@@ -88,7 +107,59 @@ def upload(request):
     user = check_validation(request)
     if user:
         print 'authentic user'
+        if request.method=='POST':
+            print  ' post of upload called'
+            post_obj = posts(request.POST,request.FILES)
+            if post_obj.is_valid():
+                 print 'form valid'
+                 image=post_obj.cleaned_data.get('image')
+                 caption=post_obj.cleaned_data.get('caption')
+                 client =ImgurClient(client_id,client_secret)
+                 #image_url=post_obj.cleaned_data.get('image_url')
+                 post=post_model(username=user,image=image, caption=caption)
+                 post.save()
+                 path = (r'C:/Users/Sant Sharma/Desktop' + '/'+  post.image.url)
+                 print path
+                 post.image_url = client.upload_from_path(path, anon=True)['link']
+                 print 'post sAVED'
+                 print post.image_url
+                 post.save()
+
+            else:
+                print 'post form invalid'
+
+
+            return redirect( '/feed/')
+        elif request.method=='GET':
+            post_obj=posts()
+
     else:
         print 'user not logged in '
         return redirect('/login/')
     return render(request,'upload.html')
+
+def like_view(request):
+    print 'like view called'
+    user=check_validation(request)
+    if user and request.method=='POST':
+        like_obj=like(request.POST)
+        if like_obj.is_valid():
+            post_id=like_obj.cleaned_data.get('post').id
+            like_exist=likes.objects.filter(post=post_id,username=user)
+            if like_exist:
+                like_exist.delete()
+                print ' like deleted'
+            elif not like_exist:
+                print ' liked the post'
+                likes.objects.create(post=post_id,username=user)
+
+
+            else :
+                print ' error with like'
+
+            return redirect('/feed/')
+        print ' user valid'
+    else :
+        print ' user invalid'
+        return redirect('/login/')
+
