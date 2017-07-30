@@ -1,5 +1,5 @@
 from django import forms
-from models import user_details , post_model , likes
+from models import user_details , post_model , likes , comment
 
 
 class signedup(forms.ModelForm):
@@ -22,3 +22,10 @@ class like(forms.ModelForm):
     class Meta:
         model = likes
         fields=['post']
+
+
+class comment_form(forms.ModelForm):
+    class Meta:
+        model = comment
+        fields=['post', 'comment_text']
+

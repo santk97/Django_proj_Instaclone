@@ -38,6 +38,14 @@ class post_model(models.Model):
     created_on=models.DateTimeField(auto_now_add=True)
     updated_on=models.DateTimeField(auto_now=True)
 
+    @property
+    def like_count(self):
+        return len(likes.objects.filter(post=self))
+
+    @property
+    def comments(self):
+        return comment.objects.filter(post=self).order_by('created_on')
+
     def __str__(self):
         return self.username.name + '  ' +   self.image_url
 
@@ -50,4 +58,17 @@ class likes(models.Model):
 
     @property
     def like_count(self):
-        return  len(likes.objects.filter(post=self))
+        return len(likes.objects.filter(post=self))
+
+    def __str__(self):
+        return self.username.name + '  has liked  '
+
+
+class comment(models.Model):
+    username=models.ForeignKey(user_details)
+    post=models.ForeignKey(post_model)
+    comment_text=models.CharField(max_length=600)
+    created_on = models.DateTimeField(auto_now_add=True)
+    updated_on = models.DateTimeField(auto_now=True)
+
+
