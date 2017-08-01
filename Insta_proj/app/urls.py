@@ -10,6 +10,8 @@ urlpatterns = [
     url(r'^feed/', views.feed),
     url(r'^upload/',views.upload),
     url(r'^like/' ,views.like_view),
-    url(r'^comment/',views.make_comment)
+    url(r'^comment/',views.make_comment),
+    url(r'^logout/',views.logout),
+
 
 ]

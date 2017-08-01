@@ -195,3 +195,14 @@ def make_comment(request):
         return redirect ('/login/')
 
     return redirect('/feed/')
+
+
+def logout(request):
+    HttpResponse("<h1> Logging out .....</h1>")
+    user=check_validation(request)
+    if user:
+        token = session_token.objects.filter(username=user)
+        token.delete()
+        return redirect('/login/')
+    else:
+        return  redirect('/login/')
