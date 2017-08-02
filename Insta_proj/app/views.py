@@ -85,7 +85,7 @@ def feed(request):
     if user:
         print 'authentic user'
         post_obj = post_model.objects.all()
-
+        user_now=user_details.objects.filter(username=user)
         for post in post_obj:
             existing_like=likes.objects.filter(post_id=post.id,username=user).first()
 
@@ -99,7 +99,7 @@ def feed(request):
                 post.save()
                 'has liked is taking default value'
 
-        return render(request, 'feed.html', {'posts':post_obj})
+        return render(request, 'feed.html', {'posts':post_obj},{'user':user_now})
     else :
         print 'user not logged in'
         return redirect('/login/')
@@ -206,3 +206,7 @@ def logout(request):
         return redirect('/login/')
     else:
         return  redirect('/login/')
+
+
+def user_info(request):
+    return  render(request,'user_info.html')
