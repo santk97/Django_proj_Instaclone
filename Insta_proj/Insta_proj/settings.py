@@ -36,10 +36,10 @@ EMAIL_USE_TLS = True
 
 EMAIL_HOST = 'smtp.gmail.com'
 
-EMAIL_HOST_USER = 'santk97@gmail.com'
+EMAIL_HOST_USER = 'instacloneapp@gmail.com'
 
 #Must generate specific password for your app in [gmail settings][1]
-EMAIL_HOST_PASSWORD = 'flmvjwkqsyvyurgs'
+EMAIL_HOST_PASSWORD = 'ixmsqeadbqdrpvyk'
 
 EMAIL_PORT = 587
 
