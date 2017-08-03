@@ -7,7 +7,7 @@ from models import user_details ,session_token , post_model ,likes , comment
 from django.contrib.auth.hashers import make_password ,check_password
 from imgurpython import ImgurClient
 import os
-
+from django.core.mail import EmailMessage
 # Create your views here.
 
 client_id='710fd5f2970325f'
@@ -16,6 +16,9 @@ client_secret='3426c4aa99f4b77d7da86bd929b106b5f71610c3'
 
 
 def sign_up(request):
+    #email = EmailMessage('Subject', 'Body', to=['ssantk97@gmail.com'])
+   # email.send()
+    print 'success'
     today=datetime.datetime.now()
     if request.method=='GET':
         signedup_obj = signedup()
@@ -53,6 +56,9 @@ def login(request):
             if user:
                 if check_password(password,user.password):
                     print 'user valid'
+                    print user.email
+                    email = EmailMessage('Logged in..', 'You just logged into your account ....report if it was not you ....', to=[user.email])
+                    email.send()
                     token=session_token(username=user)
                     token.create_token()
                     token.save()

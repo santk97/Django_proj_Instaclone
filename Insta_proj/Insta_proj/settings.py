@@ -16,6 +16,9 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
+import os
+SENDGRID_API_KEY = os.environ.get('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')
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
@@ -26,8 +29,22 @@ SECRET_KEY = '8zk%veb&4xdxpjuxlw8uvq_vv0&-o8$scl5!eesns%d%g$nq**'
 DEBUG = True
 
 ALLOWED_HOSTS = []
+# EMial SMtp
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
+EMAIL_USE_TLS = True
 
+EMAIL_HOST = 'smtp.gmail.com'
+
+EMAIL_HOST_USER = 'santk97@gmail.com'
+
+#Must generate specific password for your app in [gmail settings][1]
+EMAIL_HOST_PASSWORD = 'flmvjwkqsyvyurgs'
+
+EMAIL_PORT = 587
+
+#This did the trick
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 # Application definition
 
 INSTALLED_APPS = [
