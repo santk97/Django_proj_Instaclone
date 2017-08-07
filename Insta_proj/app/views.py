@@ -127,7 +127,7 @@ def feed(request):
                 post.has_liked=False
                 post.save()
                 'has liked is taking default value'
-        return render(request, 'feed.html', {'posts':post_obj},{'user':user_now})
+        return render(request, 'feed.html', {'posts':post_obj,'user':user_now})
     else :
         print 'user not logged in'
         return redirect('/login/')
@@ -256,3 +256,38 @@ def logout(request):
 
 def user_info(request):
     return  render(request,'user_info.html')
+
+def userfeed(request):
+    print 'USerfeed called'
+    user_search = request.GET.get('username')
+    userss=user_details.objects.filter(username=user_search).first()
+    print 'user search is',userss.username
+    print 'user name is ',userss.name
+
+    if userss:
+        print ' user found'
+        user = check_validation(request)
+        if user:
+            print 'authentic user'
+            #print 'user search is ', user_search
+            post_obj = post_model.objects.filter(username=userss).all()
+            for post in post_obj:
+                existing_like = likes.objects.filter(post_id=post.id, username=user).first()
+                if existing_like:
+                    post.has_liked = True
+                    post.save()
+                    print ' has liked changed to true'
+                else:
+                    post.has_liked = False
+                    post.save()
+                    'has liked is taking default value'
+            print 'user search is (passing to html) ', userss
+            return render(request, 'userfeed.html', {'posts': post_obj, 'username': userss})
+        else:
+            print 'user not logged in'
+            return redirect('/login/')
+    else:
+        print ' no such user found'
+    return render(request, 'userfeed.html')
+
+    return HttpResponse('<h1>hii</h1>')
