@@ -1,3 +1,4 @@
 "sendgrid.env" 
 *.pyc
 *.pyo
+.idea/

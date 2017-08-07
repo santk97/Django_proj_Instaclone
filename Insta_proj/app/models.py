@@ -12,6 +12,7 @@ class user_details(models.Model):
     password = models.CharField(max_length=400)
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now=True)
+    is_active=models.BooleanField(default=False)
 
     def __str__(self):
         return self.username
@@ -71,4 +72,7 @@ class comment(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now=True)
 
+
+    def __str__(self):
+        return self.username.name + '  has commented  '
 
