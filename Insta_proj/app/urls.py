@@ -15,6 +15,7 @@ urlpatterns = [
     url(r'^user_info/',views.user_info),
     url(r'^activate/',views.activate),
     url(r'^sign_up_success/',views.signup_success),
-    url(r'userfeed/',views.userfeed)
+    url(r'userfeed/',views.userfeed),
+    url(r'mainprod/',views.buynsell),
 
 ]

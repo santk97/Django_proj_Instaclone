@@ -16,7 +16,7 @@
       <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Insta_proj/Insta_proj/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
+            <state relative-caret-position="-187">
               <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
               <folding />
             </state>
@@ -26,8 +26,8 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Insta_proj/app/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="377">
-              <caret line="134" column="82" lean-forward="false" selection-start-line="134" selection-start-column="82" selection-end-line="134" selection-end-column="82" />
+            <state relative-caret-position="-248">
+              <caret line="316" column="88" lean-forward="false" selection-start-line="316" selection-start-column="88" selection-end-line="316" selection-end-column="88" />
               <folding>
                 <element signature="e#24#63#0" expanded="true" />
               </folding>
@@ -35,47 +35,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Insta_proj/app/urls.py">
+      <file leaf-file-name="buynsell.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Insta_proj/app/templates/buynsell.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="20" column="0" lean-forward="true" selection-start-line="17" selection-start-column="35" selection-end-line="20" selection-end-column="0" />
+            <state relative-caret-position="204">
+              <caret line="12" column="6" lean-forward="false" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="testclarifai.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Insta_proj/testclarifai.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="33" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="15" selection-end-column="33" />
-              <folding>
-                <element signature="e#0#15#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="forms.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Insta_proj/app/forms.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="7" column="65" lean-forward="false" selection-start-line="7" selection-start-column="65" selection-end-line="7" selection-end-column="65" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="feed.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Insta_proj/app/templates/feed.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="174">
-              <caret line="121" column="146" lean-forward="false" selection-start-line="121" selection-start-column="146" selection-end-line="121" selection-end-column="146" />
-              <folding>
-                <marker date="1502557912669" expanded="true" signature="93:108" ph="{...}" />
-                <marker date="1502557912669" expanded="true" signature="3951:4043" ph="..." />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -90,11 +55,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sign_up.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Insta_proj/app/templates/sign_up.html">
+      <file leaf-file-name="testclarifai.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Insta_proj/testclarifai.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1275">
-              <caret line="75" column="29" lean-forward="false" selection-start-line="75" selection-start-column="29" selection-end-line="75" selection-end-column="29" />
+            <state relative-caret-position="170">
+              <caret line="10" column="55" lean-forward="true" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="55" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="forms.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Insta_proj/app/forms.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="236">
+              <caret line="34" column="22" lean-forward="false" selection-start-line="34" selection-start-column="22" selection-end-line="34" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -103,10 +80,10 @@
       <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Insta_proj/app/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="38" column="59" lean-forward="false" selection-start-line="38" selection-start-column="59" selection-end-line="38" selection-end-column="59" />
+            <state relative-caret-position="118">
+              <caret line="38" column="4" lean-forward="false" selection-start-line="38" selection-start-column="4" selection-end-line="38" selection-end-column="4" />
               <folding>
-                <marker date="1502557610969" expanded="true" signature="167:450" ph="..." />
+                <marker date="1502560186077" expanded="true" signature="167:450" ph="..." />
               </folding>
             </state>
           </provider>
@@ -128,6 +105,8 @@
       <find>usern</find>
       <find>welc</find>
       <find>welco</find>
+      <find>csr</find>
+      <find>tags</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -157,16 +136,17 @@
         <option value="$PROJECT_DIR$/Insta_proj/testmil.py" />
         <option value="$PROJECT_DIR$/Insta_proj/Insta_proj/settings.py" />
         <option value="$PROJECT_DIR$/Insta_proj/app/templates/activate_link.html" />
-        <option value="$PROJECT_DIR$/Insta_proj/app/forms.py" />
         <option value="$PROJECT_DIR$/Insta_proj/app/templates/sign_up_succes.html" />
         <option value="$PROJECT_DIR$/Insta_proj/app/templates/activate.html" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/Insta_proj/app/urls.py" />
         <option value="$PROJECT_DIR$/Insta_proj/app/templates/sign_up.html" />
         <option value="$PROJECT_DIR$/Insta_proj/app/templates/userfeed.html" />
+        <option value="$PROJECT_DIR$/Insta_proj/app/templates/feed.html" />
+        <option value="$PROJECT_DIR$/Insta_proj/app/urls.py" />
         <option value="$PROJECT_DIR$/Insta_proj/testclarifai.py" />
         <option value="$PROJECT_DIR$/Insta_proj/app/models.py" />
-        <option value="$PROJECT_DIR$/Insta_proj/app/templates/feed.html" />
+        <option value="$PROJECT_DIR$/Insta_proj/app/forms.py" />
+        <option value="$PROJECT_DIR$/Insta_proj/app/templates/buynsell.html" />
         <option value="$PROJECT_DIR$/Insta_proj/app/views.py" />
       </list>
     </option>
@@ -300,7 +280,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Django">
+  <component name="RunManager" selected="Python.testclarifai">
     <configuration default="false" name="testsendgrid" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -549,7 +529,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Debug Logs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3666121" sideWeight="0.5030349" order="13" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23895253" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2651391" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Execute Anonymous" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -613,13 +593,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Insta_proj/app/templates/sign_up.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="1" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="16" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Insta_proj/app/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1292">
@@ -775,14 +748,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Insta_proj/app/templates/user_info.html" />
-    <entry file="file://$PROJECT_DIR$/Insta_proj/Insta_proj/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Insta_proj/app/templates/sign_up.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1275">
@@ -793,24 +758,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Insta_proj/app/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="20" column="0" lean-forward="true" selection-start-line="17" selection-start-column="35" selection-end-line="20" selection-end-column="0" />
+        <state relative-caret-position="255">
+          <caret line="17" column="37" lean-forward="false" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Insta_proj/app/forms.py">
+    <entry file="file://$PROJECT_DIR$/Insta_proj/app/templates/feed.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="7" column="65" lean-forward="false" selection-start-line="7" selection-start-column="65" selection-end-line="7" selection-end-column="65" />
-          <folding />
+        <state relative-caret-position="-290">
+          <caret line="142" column="5" lean-forward="true" selection-start-line="142" selection-start-column="5" selection-end-line="142" selection-end-column="5" />
+          <folding>
+            <marker date="1502557912669" expanded="true" signature="93:108" ph="{...}" />
+            <marker date="1502557912669" expanded="true" signature="3951:4043" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Insta_proj/testclarifai.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="33" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="15" selection-end-column="33" />
+        <state relative-caret-position="170">
+          <caret line="10" column="55" lean-forward="true" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="55" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
@@ -819,11 +787,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Insta_proj/app/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="38" column="59" lean-forward="false" selection-start-line="38" selection-start-column="59" selection-end-line="38" selection-end-column="59" />
+        <state relative-caret-position="118">
+          <caret line="38" column="4" lean-forward="false" selection-start-line="38" selection-start-column="4" selection-end-line="38" selection-end-column="4" />
           <folding>
-            <marker date="1502557610969" expanded="true" signature="167:450" ph="..." />
+            <marker date="1502560186077" expanded="true" signature="167:450" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Insta_proj/Insta_proj/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-187">
+          <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Insta_proj/app/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="34" column="22" lean-forward="false" selection-start-line="34" selection-start-column="22" selection-end-line="34" selection-end-column="22" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -835,21 +819,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Insta_proj/app/templates/feed.html">
+    <entry file="file://$PROJECT_DIR$/Insta_proj/app/templates/buynsell.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="121" column="146" lean-forward="false" selection-start-line="121" selection-start-column="146" selection-end-line="121" selection-end-column="146" />
-          <folding>
-            <marker date="1502557912669" expanded="true" signature="93:108" ph="{...}" />
-            <marker date="1502557912669" expanded="true" signature="3951:4043" ph="..." />
-          </folding>
+        <state relative-caret-position="204">
+          <caret line="12" column="6" lean-forward="false" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Insta_proj/app/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
-          <caret line="134" column="82" lean-forward="false" selection-start-line="134" selection-start-column="82" selection-end-line="134" selection-end-column="82" />
+        <state relative-caret-position="-248">
+          <caret line="316" column="88" lean-forward="false" selection-start-line="316" selection-start-column="88" selection-end-line="316" selection-end-column="88" />
           <folding>
             <element signature="e#24#63#0" expanded="true" />
           </folding>

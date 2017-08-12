@@ -29,3 +29,9 @@ class comment_form(forms.ModelForm):
         model = comment
         fields=['post', 'comment_text']
 
+class tag_form(forms.ModelForm):
+    class Meta:
+        model=post_model
+        fields=['tag1']
+
+

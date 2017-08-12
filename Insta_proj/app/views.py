@@ -2,7 +2,7 @@
 from __future__ import unicode_literals
 from django.shortcuts import render , HttpResponse ,redirect
 import datetime
-from forms import signedup , login_form, posts , like , comment_form
+from forms import signedup , login_form, posts , like , comment_form , tag_form
 from models import user_details ,session_token , post_model ,likes , comment
 from django.contrib.auth.hashers import make_password ,check_password
 from imgurpython import ImgurClient
@@ -161,15 +161,19 @@ def upload(request):
                  print 'post sAVED'
                  print post.image_url
                  print ' using clarifai'
-                 list = []
                  tags = model.predict_by_url(url=post.image_url)
-                 for temp in tags['outputs'][0]['data']['concepts']:
-                     if temp['value'] > 0.95:
-                         print ' The image has the following tags'
-                         print temp['name']
-                         list.append(temp['name'])
+                 post.tag1=tags['outputs'][0]['data']['concepts'][0]['name']
+                 post.tag2 = tags['outputs'][0]['data']['concepts'][1]['name']
+                 post.tag3 = tags['outputs'][0]['data']['concepts'][2]['name']
+                 #list = []
 
-                 post.tags=' '.join(list)
+                 #for temp in tags['outputs'][0]['data']['concepts']:
+                  #   if temp['value'] > 0.95:
+                   #      print ' The image has the following tags'
+                    #     print temp['name']
+                     #    list.append(temp['name'])
+
+                 #post.tags=' '.join(list)
                  post.save()
                  try:
                     email = EmailMessage('Uploaded a pic ',
@@ -307,3 +311,38 @@ def userfeed(request):
     return render(request, 'userfeed.html')
 
     return HttpResponse('<h1>hii</h1>')
+
+
+def buynsell(request):
+    img_url='http://www.rasmussen.edu/images/blogs/1325623457-examining-search-terms.jpg'
+    if request.method=="POST":
+        tag_form_obj=tag_form(request.POST)
+        if tag_form_obj.is_valid():
+            print ' tag form is valid'
+            tag=tag_form_obj.cleaned_data['tag1']
+            #print ' tag is ', tag
+
+            post_obj1=post_model.objects.filter(tag1=tag).first()
+            if post_obj1:
+
+                print 'tag1 found'
+                print post_obj1.image_url
+                img_url=post_obj1.image_url
+
+            post_obj2=post_model.objects.filter(tag2=tag).first()
+            if post_obj2:
+                print post_obj2.image_url
+
+                print 'tag2 found'
+                img_url=post_obj2.image_url
+
+            post_obj3=post_model.objects.filter(tag3=tag).first()
+            if post_obj3:
+                print post_obj3.image_url
+                img_url=post_obj3.image_url
+                print 'tag3 found'
+            return render(request, 'buynsell.html', {'url': img_url})
+
+        else :
+            print ' tag form is invalid'
+    return render (request,'buynsell.html', {'url': img_url} )
