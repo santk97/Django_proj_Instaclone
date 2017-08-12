@@ -36,6 +36,7 @@ class post_model(models.Model):
     image_url=models.CharField(max_length=250)
     caption=models.CharField(max_length=400)
     has_liked=models.BooleanField(default=False)
+    tags=models.CharField(max_length=1000,default='products')
     created_on=models.DateTimeField(auto_now_add=True)
     updated_on=models.DateTimeField(auto_now=True)
 

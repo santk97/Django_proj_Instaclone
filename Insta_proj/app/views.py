@@ -7,7 +7,11 @@ from models import user_details ,session_token , post_model ,likes , comment
 from django.contrib.auth.hashers import make_password ,check_password
 from imgurpython import ImgurClient
 from django.core.mail import EmailMessage
+from clarifai.rest import ClarifaiApp
 # Create your views here.
+
+app = ClarifaiApp(api_key='ab7a257992dd4a39a6cce25e706ae0bc')
+model=app.models.get("general-v1.3")
 
 client_id='710fd5f2970325f'
 client_secret='3426c4aa99f4b77d7da86bd929b106b5f71610c3'
@@ -116,7 +120,8 @@ def feed(request):
     if user:
         print 'authentic user'
         post_obj = post_model.objects.all()
-        user_now=user_details.objects.filter(username=user)
+        user_now=user_details.objects.filter(username=user).first()
+        print 'welcome' , user_now.name
         for post in post_obj:
             existing_like=likes.objects.filter(post_id=post.id,username=user).first()
             if existing_like:
@@ -127,7 +132,7 @@ def feed(request):
                 post.has_liked=False
                 post.save()
                 'has liked is taking default value'
-        return render(request, 'feed.html', {'posts':post_obj,'user':user_now})
+        return render(request, 'feed.html', {'posts':post_obj,'user':user_now.name})
     else :
         print 'user not logged in'
         return redirect('/login/')
@@ -155,6 +160,17 @@ def upload(request):
                  post.image_url = client.upload_from_path(path, anon=True)['link']
                  print 'post sAVED'
                  print post.image_url
+                 print ' using clarifai'
+                 list = []
+                 tags = model.predict_by_url(url=post.image_url)
+                 for temp in tags['outputs'][0]['data']['concepts']:
+                     if temp['value'] > 0.95:
+                         print ' The image has the following tags'
+                         print temp['name']
+                         list.append(temp['name'])
+
+                 post.tags=' '.join(list)
+                 post.save()
                  try:
                     email = EmailMessage('Uploaded a pic ',
                                       'You just uploded a pic from your account .....image url \n \n'+post.image_url+'\n   with the caption \n \n ' + post.caption, to=[user.email])
