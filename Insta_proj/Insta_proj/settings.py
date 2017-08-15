@@ -43,7 +43,6 @@ EMAIL_HOST_PASSWORD = 'dhiwyrtbfhmazpop'
 
 EMAIL_PORT = 587
 
-#This did the trick
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 # Application definition
 
